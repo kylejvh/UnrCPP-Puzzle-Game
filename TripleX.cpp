@@ -60,7 +60,8 @@ bool PlayGame(int Difficulty)
 
     std::cout << "There are 3 numbers in the code.";
     std::cout << "\nThe numbers add up to: " << CodeSum;
-    std::cout << "\nThe numbers multiplied equal: " << CodeProduct << std::endl;
+    std::cout << "\nThe numbers multiplied equal: " << CodeProduct << std::endl
+              << std::endl;
 
     // Store player guesses
     int GuessA, GuessB, GuessC;
@@ -78,12 +79,12 @@ bool PlayGame(int Difficulty)
     // Check if player's guess is correct
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "Correct! The pig wizard grunts in approval. You're one step closer...\n";
+        std::cout << "\nCorrect! The pig wizard grunts in approval. You're one step closer...";
         return true;
     }
     else
     {
-        std::cout << "Wrong! The pig wizard squeals and casts a spell, disappearing forever.\n";
+        std::cout << "\nWrong! The pig wizard squeals and starts to casts a spell, but on a last second whim, decides to give you another chance...\n";
         return false;
     }
 }
